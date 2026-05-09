@@ -195,6 +195,77 @@ import AddIcon from '@material-ui/icons/Add';
 
 ---
 
+## Design Tokens — Colors
+
+All button colors are defined in the Duetto 2026 Design System. Use these token names when referencing in code — never hardcode hex values.
+
+### Token Reference
+
+| Token | Hex | Usage |
+|---|---|---|
+| `teal/teal-700` | `#006461` | Contained Primary bg (light theme); Text/Outline Primary text |
+| `teal/teal-900` | `#053c3c` | Contained Primary bg — Pressed state |
+| `teal/teal-50` | `#d7f7ed` | Contained Secondary bg (light theme) |
+| `teal/teal-100` | `#5ceade` | Contained Secondary bg — Hover/Pressed state |
+| `lucentGreen/lucentGreen-70` | `#c4ff45` | Contained Primary bg (dark theme) |
+| `lucentGreen/lucentGreen-200` | `#a9df40` | Contained Primary bg — Hover state (dark theme) |
+| `surface/white` | `#ffffff` | Outlined button background; text inverse |
+| `surface/muted` | `#f5f5f5` | Button bg — Hover state (light theme) |
+| `surface/overlay` | `#eaeeef` | Text button bg — Pressed state (light theme) |
+| `grey/grey-600` | `#63696f` | Outlined button border — Default state |
+| `grey/grey-700` | `#4f5b60` | Text button bg — Hover state (dark theme); text/secondary |
+| `grey/grey-800` | `#354549` | Outlined button border — Hover/Pressed state; dark theme bg |
+| `text/primary` | `#1c1c1c` | Label text on light backgrounds |
+| `text/secondary` | `#4f5b60` | Label text — Secondary priority (light theme) |
+| `text/inverse` | `#ffffff` | Label text on dark/filled backgrounds |
+| `text/disabled` | `#aeb4ba` | Label text — Disabled state |
+| `border/emphasis` | `#aeb4ba` | Outlined button border — Disabled state |
+
+### Color by Variant & State (Light Theme)
+
+| Variant | State | Background | Border | Label |
+|---|---|---|---|---|
+| Contained Primary | Default | `teal/teal-700` #006461 | — | `text/inverse` #ffffff |
+| Contained Primary | Hover | lighter teal | — | `text/inverse` #ffffff |
+| Contained Primary | Pressed | `teal/teal-900` #053c3c | — | `text/inverse` #ffffff |
+| Contained Primary | Disabled | `surface/muted` #f5f5f5 | — | `text/disabled` #aeb4ba |
+| Contained Secondary | Default | `teal/teal-50` #d7f7ed | — | `text/primary` #1c1c1c |
+| Contained Secondary | Hover | `teal/teal-100` #5ceade | — | `text/primary` #1c1c1c |
+| Contained Secondary | Pressed | `teal/teal-700` #006461 | — | `text/inverse` #ffffff |
+| Contained Secondary | Disabled | `surface/muted` #f5f5f5 | — | `text/disabled` #aeb4ba |
+| Outlined Primary | Default | `surface/white` #ffffff | `grey/grey-600` #63696f | `teal/teal-700` #006461 |
+| Outlined Primary | Hover | `surface/muted` #f5f5f5 | `grey/grey-800` #354549 | `teal/teal-700` #006461 |
+| Outlined Primary | Pressed | `surface/white` #ffffff | `grey/grey-800` #354549 (2px) | `teal/teal-700` #006461 |
+| Outlined Primary | Disabled | `surface/white` #ffffff | `border/emphasis` #aeb4ba | `text/disabled` #aeb4ba |
+| Outlined Secondary | Default | `surface/white` #ffffff | `grey/grey-600` #63696f | `text/secondary` #4f5b60 |
+| Outlined Secondary | Hover | `surface/muted` #f5f5f5 | `grey/grey-800` #354549 | `text/secondary` #4f5b60 |
+| Outlined Secondary | Pressed | `surface/white` #ffffff | `grey/grey-800` #354549 (2px) | `text/secondary` #4f5b60 |
+| Outlined Secondary | Disabled | `surface/white` #ffffff | `border/emphasis` #aeb4ba | `text/disabled` #aeb4ba |
+| Text Primary | Default | transparent | — | `teal/teal-700` #006461 |
+| Text Primary | Hover | `surface/muted` #f5f5f5 | — | `teal/teal-700` #006461 |
+| Text Primary | Pressed | `surface/overlay` #eaeeef | — | `teal/teal-700` #006461 |
+| Text Primary | Disabled | transparent | — | `text/disabled` #aeb4ba |
+| Text Secondary | Default | transparent | — | `text/secondary` #4f5b60 |
+| Text Secondary | Hover | `surface/muted` #f5f5f5 | — | `text/secondary` #4f5b60 |
+| Text Secondary | Pressed | `surface/overlay` #eaeeef | — | `text/secondary` #4f5b60 |
+| Text Secondary | Disabled | transparent | — | `text/disabled` #aeb4ba |
+
+### Dark Theme
+
+| Variant | State | Background | Border | Label |
+|---|---|---|---|---|
+| Contained Primary | Default | `lucentGreen/lucentGreen-70` #c4ff45 | — | `text/primary` #1c1c1c |
+| Contained Primary | Hover | `lucentGreen/lucentGreen-200` #a9df40 | — | `text/primary` #1c1c1c |
+| Contained Secondary | Default | `grey/grey-800` #354549 | — | `text/inverse` #ffffff |
+| Outlined (all) | Default | transparent | `surface/white` #ffffff | `surface/white` #ffffff |
+| Outlined (all) | Hover | `grey/grey-700` #4f5b60 | `surface/white` #ffffff | `surface/white` #ffffff |
+| Outlined (all) | Pressed | `teal/teal-700` #006461 | `surface/white` #ffffff | `surface/white` #ffffff |
+| Text (all) | Default | transparent | — | `surface/white` #ffffff |
+| Text (all) | Hover | `grey/grey-700` #4f5b60 | — | `surface/white` #ffffff |
+| Text (all) | Pressed | `grey/grey-800` #354549 | — | `surface/white` #ffffff |
+
+---
+
 ## Figma Reference
 
 ```
