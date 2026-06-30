@@ -39,7 +39,7 @@ Duetto has canonical terms for hospitality metrics. Two rules govern how they ap
 ## Complete Revenue Management Vocabulary Reference
 
 Full industry + Duetto terminology in `references/vocabulary.json`:
-- **85+ terms** with definitions, abbreviations, categories
+- **123 terms** with definitions, abbreviations, categories
 - **Duetto product relationships** for each term
 - **Organized by category**: Rate, Booking, Settings, Systems/Integrations, Yielding, Forecast, Web Shopping, Events, Group, Segments, Reports, Revenue Management
 - **Searchable** — import into prototypes for consistent terminology

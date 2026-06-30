@@ -207,7 +207,7 @@
       "term": "Global Distribution System",
       "abbr": "GDS",
       "category": "Systems/Integrations",
-      "definition": "A network operated by a company that enables automated transactions between Third-parties and booking agents in order to provision travel related services to the end consumers. These are computerized reservation networks through which users—travel agents, airline employees or travelers—view data on a wide range of travel services, including air, hotel, auto rental and like services",
+      "definition": "A network operated by a company that enables automated transactions between Third-parties and booking agents in order to provision travel related services to the end consumers. These are computerized reservation networks through which users\u2014travel agents, airline employees or travelers\u2014view data on a wide range of travel services, including air, hotel, auto rental and like services",
       "duettoRelation": "Several GDSs provide their services to users worldwide (e.g., Amadeus, Cendant's Galileo International, Sabre, Worldspan) while others provide regional or national coverage. Duetto integrates with certain GDS systems such as Genares"
     },
     {
@@ -552,6 +552,314 @@
       "category": "Rate",
       "definition": "The process of actively applying revenue management by selling the same products at different prices to different customers",
       "duettoRelation": null
+    },
+    {
+      "term": "Best Available Rate",
+      "abbr": "BAR",
+      "category": "Rate",
+      "definition": "The non-qualified, publicly available rate that serves as the baseline for comparison between hotels. Also referred to as 'Retail' rate - typically the base rate charged by hotels",
+      "duettoRelation": "Used as rate code segment in Duetto"
+    },
+    {
+      "term": "Booking",
+      "abbr": null,
+      "category": "Booking",
+      "definition": "Key fields: ID, Booking Date, Check In/Out Dates, Rate, Rate code (BAR), Block code, Room type (STD)",
+      "duettoRelation": "Core data structure in Duetto for tracking reservations"
+    },
+    {
+      "term": "Booking.com",
+      "abbr": null,
+      "category": "Systems/Integrations",
+      "definition": "An OTA site (like Expedia.com) - used as a recommended Standard Rate Shop Channel. Supports 365 days into the future (vs. Expedia only 90 days)",
+      "duettoRelation": "Primary rate shopping channel in Duetto alongside Expedia"
+    },
+    {
+      "term": "Brand.com",
+      "abbr": null,
+      "category": "Segments",
+      "definition": "Refers to the company-branded website",
+      "duettoRelation": "Example: Marriott.com, hilton.com, etc. Distribution channel in Duetto"
+    },
+    {
+      "term": "Channel",
+      "abbr": null,
+      "category": "Segments",
+      "definition": "Distribution channels such as OTA, Direct, Agencies, GDS, Brand.com",
+      "duettoRelation": "Fundamental segmentation dimension in Duetto"
+    },
+    {
+      "term": "Commit",
+      "abbr": null,
+      "category": "Booking",
+      "definition": "Committed room nights, includes both reservations and rooms remaining in a group block that have not been picked up yet",
+      "duettoRelation": "Tracking metric for group business in Duetto"
+    },
+    {
+      "term": "Comp set",
+      "abbr": null,
+      "category": "Segments",
+      "definition": "Competitive set - the hotels that you compete with (similar area, prices, offerings, target audiences, etc.)",
+      "duettoRelation": "Used in benchmarking and competitive analysis in Duetto"
+    },
+    {
+      "term": "Custom Report Building",
+      "abbr": "CRB",
+      "category": "Reports",
+      "definition": "Part of Scoreboard - ability to build custom reports",
+      "duettoRelation": "Feature in Duetto reporting module"
+    },
+    {
+      "term": "Current (rate)",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Last published rate for a room",
+      "duettoRelation": "Core rate concept in Duetto pricing"
+    },
+    {
+      "term": "Director of Revenue Management",
+      "abbr": "DORM",
+      "category": "RM",
+      "definition": "Job title - person responsible for revenue management",
+      "duettoRelation": "Primary user role in Duetto"
+    },
+    {
+      "term": "Duetto Rate Engine",
+      "abbr": "DRE",
+      "category": "Systems/Integrations",
+      "definition": "Engine that calculates rates across all applications. Has an API that returns loyalty rates and restrictions for a given member ID",
+      "duettoRelation": "Can be integrated with booking engines, online rate calendars and player kiosks to let loyalty members know special rates"
+    },
+    {
+      "term": "Food and Beverage",
+      "abbr": "F&B",
+      "category": "Rate",
+      "definition": "Needs separate accounting from room revenue. If rate is $150 but rate code of BFST (breakfast) is also associated, then $125 attributed to room revenue and $25 to F&B",
+      "duettoRelation": "Important for accurate revenue segmentation in Duetto"
+    },
+    {
+      "term": "Forecast and Budget Builder",
+      "abbr": "FBB",
+      "category": "Forecast",
+      "definition": "Part of Scoreboard - forecasting and budget building functionality",
+      "duettoRelation": "Feature in Duetto for financial planning"
+    },
+    {
+      "term": "Find My Rate",
+      "abbr": null,
+      "category": "Segments",
+      "definition": "Publicly available feature that allows individuals to enter a Member ID, select a hotel of interest, and see room prices available to that individual",
+      "duettoRelation": "Loyalty program integration feature"
+    },
+    {
+      "term": "Folio",
+      "abbr": null,
+      "category": "Booking",
+      "definition": "Itemized list of charges when you check out. Not all integrations send folio data, but if they do, once check out date has passed, Duetto stops looking at reservations data and starts looking at folio data",
+      "duettoRelation": "Used for historical revenue reporting accuracy in Duetto"
+    },
+    {
+      "term": "Global Distribution System",
+      "abbr": "GDS",
+      "category": "Systems/Integrations",
+      "definition": "System that distributes hotel rates, inventory, etc. to a global audience including agents, OTAs, etc. Main systems: Amadeus, Galileo/Apollo, Sabre, Worldspan. Generally use older technology and not connected through Internet",
+      "duettoRelation": "Distribution channel that Duetto tracks and manages"
+    },
+    {
+      "term": "Gross Operating Profit Per Available Room",
+      "abbr": "GopPAR",
+      "category": "Rate",
+      "definition": "Gross operating profit per available room",
+      "duettoRelation": "Financial metric tracked in Duetto"
+    },
+    {
+      "term": "Hurdle Rate",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Minimum rate a hotel can accept for a room. Calculation: Hurdle Rate = Last Room Value + LRV Delta * the minimum of (number of Incremental Rooms Sold since last optimization or Rooms Sold Ceiling)",
+      "duettoRelation": "LRV Delta ensures that between optimizations the LRV adjusts as new reservations or cancellations are made"
+    },
+    {
+      "term": "Last Room Value",
+      "abbr": "LRV",
+      "category": "Rate",
+      "definition": "The maximum room revenue that you can expect to make from the last room available for sale. If demand is less than capacity, LRV will be zero. Used as control to ensure no rate sold below maximum expected revenue",
+      "duettoRelation": "Sent as control to reservation system (PMS or CRS). Optimization considers predicted demand and rates for that date plus surrounding dates and multi-night stay interactions"
+    },
+    {
+      "term": "Meeting, Incentive, Conferences and Exhibitions",
+      "abbr": "MICE",
+      "category": "Group",
+      "definition": "Also referred to as Meeting & Events business segment",
+      "duettoRelation": "Major segment type in Duetto"
+    },
+    {
+      "term": "Market Penetration Index",
+      "abbr": "MPI",
+      "category": "Forecast",
+      "definition": "Calculation: Actual occupancy / Theoretical occ. rate * 100",
+      "duettoRelation": "Benchmarking metric in Duetto"
+    },
+    {
+      "term": "Net Revenue Per Available Room",
+      "abbr": "NetRevPAR",
+      "category": "Rate",
+      "definition": "Calculation: (Total room revenue - costs) / total available rooms",
+      "duettoRelation": "Financial performance metric in Duetto"
+    },
+    {
+      "term": "New Rate Management Experience",
+      "abbr": "NRMX",
+      "category": "Duetto",
+      "definition": "Internal Duetto project to redesign rate management functions",
+      "duettoRelation": "Ongoing product development initiative"
+    },
+    {
+      "term": "Occupancy",
+      "abbr": null,
+      "category": "Yielding",
+      "definition": "Percentage of rooms sold per given time period. Calculation: Rooms sold / Total rooms",
+      "duettoRelation": "Core metric used throughout Duetto for performance measurement"
+    },
+    {
+      "term": "Out of Order",
+      "abbr": "OoO",
+      "category": "Booking",
+      "definition": "Rooms that can't be sold for whatever reason (repairs, etc.)",
+      "duettoRelation": "Inventory control in Duetto"
+    },
+    {
+      "term": "Opaque pricing",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Technique used to hide lower prices at which merchandise is sold. Targeted at price-sensitive customers who will only buy at lower price points",
+      "duettoRelation": "Used in Duetto for segment-specific pricing strategy"
+    },
+    {
+      "term": "Out of the Books",
+      "abbr": "OTB",
+      "category": "Booking",
+      "definition": "Measure used when looking ahead to see occupancy or revenue booked at hotel. Amount on books changes with reservations/cancellations until date arrives. Refers to reservations only (committed rooms refers to reservations + group block rooms)",
+      "duettoRelation": "Key forecasting metric in Duetto"
+    },
+    {
+      "term": "Override (rate)",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "In Duetto, ability to type in any rate for a room type, overriding the Current rate",
+      "duettoRelation": "Manual rate management feature in Duetto"
+    },
+    {
+      "term": "Pricerator",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Duetto's algorithm that creates price recommendations",
+      "duettoRelation": "Core pricing engine in Duetto"
+    },
+    {
+      "term": "Protect (rate)",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "In Duetto, the published rate for the default segment can never go below a manually entered protect rate. Duetto will never suggest a Recommended rate below Protect",
+      "duettoRelation": "Rate control mechanism in Duetto. Additional segments do not have a Protect rate"
+    },
+    {
+      "term": "Room Rules First",
+      "abbr": "RRF",
+      "category": "Duetto",
+      "definition": "Internal Duetto project related to the order in which rate recommendations are executed. Default was Pricing Rules First, RRF added as alternative",
+      "duettoRelation": "Product feature for rate recommendation logic"
+    },
+    {
+      "term": "Rate Shop",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Duetto's term for ability to compare rates across multiple channels and competitors. Data supplied by OTA Insight. Customers select primary channel (generally Booking.com or Expedia) for calculations like competitor average/high/low",
+      "duettoRelation": "Competitive intelligence feature in Duetto"
+    },
+    {
+      "term": "Revenue Generation Index",
+      "abbr": "RGI",
+      "category": "Forecast",
+      "definition": "Means of measuring hotel performance and occupancy rate against market competitors. Ensures you're receiving good share of market revenue relative to competitors",
+      "duettoRelation": "Benchmarking metric in Duetto"
+    },
+    {
+      "term": "Run of House",
+      "abbr": "ROH",
+      "category": "Booking",
+      "definition": "Hotel can assign any available room when guest checks into hotel",
+      "duettoRelation": "Room assignment policy tracked in Duetto"
+    },
+    {
+      "term": "Smith Travel Research",
+      "abbr": "STR",
+      "category": "Reports",
+      "definition": "Leading provider of online data for hotels and real estate, including hotel performance and benchmarking",
+      "duettoRelation": "External benchmarking source used with Duetto"
+    },
+    {
+      "term": "To Be Booked",
+      "abbr": "TBB",
+      "category": "Booking",
+      "definition": "To be sold rooms left to be sold. Calculation: Demand (includes some amount of dropoff) - OTB",
+      "duettoRelation": "Forecasting metric in Duetto"
+    },
+    {
+      "term": "Tiers",
+      "abbr": null,
+      "category": "Booking",
+      "definition": "In GameChanger, references to different tiers such as Tier 1, Tier 2. Tiers refer to length of stay tiers set in hotel settings",
+      "duettoRelation": "Product feature in Duetto for LOS-based rules"
+    },
+    {
+      "term": "Total Revenue Per Available Room",
+      "abbr": "TRevPAR",
+      "category": "Rate",
+      "definition": "Calculation: (Total room + ancillary revenues) / # of available rooms",
+      "duettoRelation": "Financial metric including ancillary revenue in Duetto"
+    },
+    {
+      "term": "Total Revenue Per Client",
+      "abbr": "TRevPEC",
+      "category": "Rate",
+      "definition": "Total revenue generated per client/guest",
+      "duettoRelation": "Customer value metric in Duetto"
+    },
+    {
+      "term": "Unusual Pickup Variance",
+      "abbr": null,
+      "category": "Forecast",
+      "definition": "One of the anomaly detection metrics that shows changes in pickup as compared to STLY. Can be set as a notification",
+      "duettoRelation": "Anomaly detection feature in Duetto alerts"
+    },
+    {
+      "term": "Uniform System of Accounts for the Lodging Industry",
+      "abbr": "USALI",
+      "category": "Reports",
+      "definition": "Standard accounting system for lodging industry",
+      "duettoRelation": "Industry standard used for revenue accounting"
+    },
+    {
+      "term": "Walk Away Rate Rules",
+      "abbr": "WARR",
+      "category": "Duetto",
+      "definition": "Internal Duetto term for product feature that allows customers to see the rate at which customer reservation is no longer profitable for hotel",
+      "duettoRelation": "Profitability analysis feature in Duetto"
+    },
+    {
+      "term": "Wholesalers",
+      "abbr": null,
+      "category": "Segments",
+      "definition": "3rd party organization that buys room nights in bulk, bundles with airfare and sells to travel agents and OTAs. B2B segment - does not sell directly to public but to other 3rd party sites and distribution channels",
+      "duettoRelation": "Distribution channel managed in Duetto"
+    },
+    {
+      "term": "Yielding Capacity",
+      "abbr": null,
+      "category": "Yielding",
+      "definition": "Calculation: (Physical Capacity - Out of Order) - (Group Blocks + Overbooking)",
+      "duettoRelation": "Key capacity metric in Duetto"
     }
   ],
   "categories": [
@@ -569,5 +877,5 @@
     "Reports",
     "RM"
   ],
-  "searchHelper": "Search by term name, abbreviation, category, or include Duetto relation in search"
+  "searchHelper": "Search by term name, abbreviation, category, or include Duetto relation in search. Total: 123 terms"
 }
