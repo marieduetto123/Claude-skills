@@ -1,0 +1,573 @@
+{
+  "vocabulary": [
+    {
+      "term": "Average Daily Rate",
+      "abbr": "ADR",
+      "category": "Rate",
+      "definition": "A measure of the average rate paid for rooms sold, calculated by dividing room revenue by rooms sold",
+      "duettoRelation": "ADR is one metric used by hotels to measure their success and YoY growth. An increase in ADR generally indicates an increase in revenue/profits (provided all else remains equal -- no decrease in occupancy or increase in costs). App sections: ADR can be found throughout the app as it is used to measure how well a date is doing, forecasted for future dates, and reported for past dates"
+    },
+    {
+      "term": "Base Room Rates",
+      "abbr": "BRR",
+      "category": "Rate",
+      "definition": "The default room type differentials in the app",
+      "duettoRelation": "Duetto allows DORMs to yield room type differentials via room type rules. App sections: Room Type Pricing Overview, Rules, Base Room Rates"
+    },
+    {
+      "term": "Best Available Rate",
+      "abbr": "BAR",
+      "category": "Rate",
+      "definition": "The non-qualified, publicly available rate that serves as the baseline for comparison between hotels",
+      "duettoRelation": "The BAR rate serves as a benchmark and typically drives discount and package pricing based on a percentage or dollar amount above or below BAR. Duetto does not advocate these derived rates due to our principle of open pricing. BAR is a typical segment many times synonymous with 'Rack' and 'Transient'. BAR replaced Rack Rates as revenue management evolved and became more dynamic"
+    },
+    {
+      "term": "Block Code",
+      "abbr": "BC",
+      "category": "Settings",
+      "definition": "Code attached only to group rooms that are a part of a block",
+      "duettoRelation": "Duetto uses block codes to identify which reservations go into the group segment"
+    },
+    {
+      "term": "Block Pricing",
+      "abbr": null,
+      "category": "Booking",
+      "definition": "A nonyieldable rate given to a set number (or block) of rooms held for a particular group",
+      "duettoRelation": "Blocked rooms (that are not yet reserved) are taken out of inventory resulting in a decrease in the yielding capacity on the booking curve on the home page"
+    },
+    {
+      "term": "Booking Curve",
+      "abbr": "BC",
+      "category": "Booking",
+      "definition": "Visual representation of the pickup, number of bookings, availability, and yielding capacity of the hotel over time (starting at a certain number of DBA) for a particular day or time period",
+      "duettoRelation": "Important tool for yielding. App sections: Home, Booking Curve Report, Near End Booking Curve Report, Average Booking Curve Report, Cumulative Booking Curve Reports"
+    },
+    {
+      "term": "Booking Window",
+      "abbr": "BW",
+      "category": "Booking",
+      "definition": "The time frame in which hotel reservations come into the hotel for a particular day",
+      "duettoRelation": "The booking window is reflected in the various booking curves throughout the app. The booking window is specific to the hotel/area in which a hotel is located. Duetto can help identify the booking window for a particular hotel by using the Average Booking Curve Report. App sections: Home, Reports: Booking Curve, Near End Booking Curve, Average Booking Curve"
+    },
+    {
+      "term": "Capacity",
+      "abbr": "CAP",
+      "category": "Yielding",
+      "definition": "The set number of rooms in the hotel",
+      "duettoRelation": "App sections: Home"
+    },
+    {
+      "term": "Central Reservation System",
+      "abbr": "CRS",
+      "category": "Systems/Integrations",
+      "definition": "A computerized system that stores and distributes information of a hotel, resort, or other lodging facilities",
+      "duettoRelation": "Assists hotel managers in managing their online marketing and sales, allowing them to upload their rates and availabilities to be seen by sales channels that are using the CRS. Rate can also be kept in the CRS. Duetto is able to interface with certain CRS systems to directly push rates from Duetto into the CRS. CRS-Duetto Integrations: SynXis, Genares, Opera, Trust, Windsurfer"
+    },
+    {
+      "term": "Channel Manager",
+      "abbr": "CM",
+      "category": "Systems/Integrations",
+      "definition": "A system that pushes rates to multiple OTAs/booking channels at one time",
+      "duettoRelation": "Channel managers can be used separately to send rates to various channels or they can be directly connected to another system, such as the hotel's PMS. Direct connectivity to Duetto would allow for a dorm to only have to push a rate in one place rather than multiple places (PMS, GDS, CRS, Channel Manager, OTA extranets). Duetto integrations: Siteminder, EZ Yield"
+    },
+    {
+      "term": "Channels",
+      "abbr": null,
+      "category": "Booking",
+      "definition": "Different methods by which a customer books/reserves a room",
+      "duettoRelation": "Many times hotels will segment customers based on the type of booking channel the customers uses. Example: internet/OTA, Wholesale, Direct/Transient, etc. App sections: Segmentation, Home, Reporting"
+    },
+    {
+      "term": "Closed to Arrival",
+      "abbr": "CTA",
+      "category": "Booking",
+      "definition": "A room inventory control function that indicates a reservation cannot be confirmed for arrival on this date; a reservation can stay but not start on this date",
+      "duettoRelation": null
+    },
+    {
+      "term": "Clustering",
+      "abbr": null,
+      "category": "Duetto",
+      "definition": "A group of hotels within a company that are rolled up into one hotel for reporting purposes",
+      "duettoRelation": "Unique to Duetto. This is particularly useful for large companies with many hotels. A cluster can be a geographical area, a small group of hotels under a particular DORM, or the entire company grouped together"
+    },
+    {
+      "term": "Cold Reset",
+      "abbr": null,
+      "category": "Systems/Integrations",
+      "definition": "When a reset of the integration is necessary (usually deals with servers)",
+      "duettoRelation": "Sometimes necessary for OXI"
+    },
+    {
+      "term": "Commission",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "The payment that a travel agent receives for each reservation made on their site (OTAs are usually 25% of the sell rate)",
+      "duettoRelation": "This cuts into the profitability of each reservation depending on their source. Typically, the direct booking engine has the lowest cost of acquisition. Hotels are increasingly becoming concerned with increasing commissions and costs of acquisitions, particularly compared to revenue growth or lack thereof"
+    },
+    {
+      "term": "Committed",
+      "abbr": "CMT",
+      "category": "Booking",
+      "definition": "The number of reservations + blocked rooms (not already reserved)",
+      "duettoRelation": "Not to be confused with OTB"
+    },
+    {
+      "term": "Current Rate",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Direct rate pushed through Duetto",
+      "duettoRelation": "The current rate is the sell rate before sales are applied. This rate is pushed/stored in Duetto. If there is two way connectivity between Duetto and the PMS, this reflects the rate that has been pushed to the PMS. App sections: Home, Pricing Overview, Room Type Pricing Overview, Yielding Report"
+    },
+    {
+      "term": "Daily Rates",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "The rates for the hotel's base room type each day for one year (365 days) out",
+      "duettoRelation": "Duetto asks for a hotel's daily rates during the onboarding process. These rates are then put into the system so that the rates in Duetto initially match those in the property's PMS"
+    },
+    {
+      "term": "Day(s) before arrival",
+      "abbr": "DBA",
+      "category": "Booking",
+      "definition": "The number of days before the stay date",
+      "duettoRelation": "This term is seen throughout the app, particularly in booking curves"
+    },
+    {
+      "term": "Delphi",
+      "abbr": null,
+      "category": "Systems/Integrations",
+      "definition": "Sales block inventory system",
+      "duettoRelation": "Duetto is working to soon be able to integrate with Delphi"
+    },
+    {
+      "term": "Demand",
+      "abbr": null,
+      "category": "Forecast",
+      "definition": "Expected revenue results based on analysis (occupancy, average rate, etc). The forecast of how many rooms you could sell if you had an unlimited number of rooms",
+      "duettoRelation": "Whenever 'Demand' is seen in the app, it refers to the unconstrained forecast. This is the forecast of how many rooms you could sell if you had an unlimited number of rooms. App sections: Home, Pricing Overview, Yielding Overview, Forecasting Reports, Financial Forecast Report"
+    },
+    {
+      "term": "Denial",
+      "abbr": null,
+      "category": "Web Shopping",
+      "definition": "A hotel has been shopped on the hotel's direct booking engine and a rate was NOT given, this could be due to the hotel being sold out or restriction placed on the shopped date",
+      "duettoRelation": "App sections: Home, Rate Information, Lost Business Report, Lost Business Detail Report"
+    },
+    {
+      "term": "Dynamic/Open Pricing",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Yielding philosophy that uses rate to control pickup and inventory as opposed to opening and closing certain set rate categories",
+      "duettoRelation": "Duetto's philosophy"
+    },
+    {
+      "term": "Event",
+      "abbr": null,
+      "category": "Events",
+      "definition": "A one-time event that positively or negatively affect a hotel's demand",
+      "duettoRelation": "This type of event does not repeat consistently and affects the demand for the hotel. Example: weather related events, such as a hurricane or snow storm. App sections: Calendar, Events"
+    },
+    {
+      "term": "Event: Linked",
+      "abbr": null,
+      "category": "Events",
+      "definition": "A recurring event that positively or negatively affects a hotel's demand",
+      "duettoRelation": "This type of event is repetitive/recurring and affects the demand for the hotel. Example: New Year's Eve. App sections: Calendar, Events"
+    },
+    {
+      "term": "Event: Note",
+      "abbr": null,
+      "category": "Events",
+      "definition": "An event that does NOT positively or negatively affect a hotel's demand",
+      "duettoRelation": "An event that a DORM wants noted on the calendar but will not affect the demand or forecast for the hotel. Example: religious holidays, such as Easter, that does not increase or decrease the number of reservations for the hotel for that time period. App sections: Calendar, Events"
+    },
+    {
+      "term": "Fenced Rate",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "A rate that involves certain requirements in order to make the reservations",
+      "duettoRelation": "Examples of fenced rate options include nonrefundable and non-cancelable reservations, advanced purchase reservations, and staying over a weekend. Fenced rates allow for segmentation since it caused people to choose a particular booking pattern based on the type of rates they prefer. Fenced rates also allow for certain people to choose to pay higher rates since they either do not qualify for the lower rate or see added value in the higher rate"
+    },
+    {
+      "term": "Flagging Events",
+      "abbr": null,
+      "category": "Events",
+      "definition": "Marking an event within Duetto",
+      "duettoRelation": "Flagging an event in Duetto marks the dates of an event on the Duetto calendar and alerts the system to the change in normal demand. Duetto has 3 types of events: (1) Note - this is an event that a hotel wants noted on the calendar but does not affect the hotel's demand (ie a religious holiday such as Easter that may not increase or decrease demand for the hotel), (2) Event - this is an event that affects the demand of the hotel (positively or negatively) that does not repeat consistently (ie a weather event such as a hurricane or a one-time festival), (3) Linked - this is an event that affects the demand of the hotel (positively or negatively) that happens consistently (ie New Year's that occurs each year). App sections: Calendar, Events"
+    },
+    {
+      "term": "Forecast",
+      "abbr": null,
+      "category": "Forecast",
+      "definition": "Expected revenue results based on analysis, (occupancy and average rate included)",
+      "duettoRelation": "Whenever 'Forecast' is seen in the app, it refers to the constrained forecast. This is the forecast when you are limited to the number of rooms you have to sell at your hotel. App sections: Home, Pricing Overview, Yielding Overview, Financial Forecast Builder, Forecasting Reports, Financial Forecast Report"
+    },
+    {
+      "term": "Global Distribution System",
+      "abbr": "GDS",
+      "category": "Systems/Integrations",
+      "definition": "A network operated by a company that enables automated transactions between Third-parties and booking agents in order to provision travel related services to the end consumers. These are computerized reservation networks through which users—travel agents, airline employees or travelers—view data on a wide range of travel services, including air, hotel, auto rental and like services",
+      "duettoRelation": "Several GDSs provide their services to users worldwide (e.g., Amadeus, Cendant's Galileo International, Sabre, Worldspan) while others provide regional or national coverage. Duetto integrates with certain GDS systems such as Genares"
+    },
+    {
+      "term": "Group Block (definite)",
+      "abbr": null,
+      "category": "Booking",
+      "definition": "Rooms held available for a group to reserve who has already signed a deal with the hotel (will definitely be coming)",
+      "duettoRelation": "Duetto automatically pulls definitely group rooms from inventory/yielding capacity. Group blocks in the app refer to definite blocks by default"
+    },
+    {
+      "term": "Group Displacement",
+      "abbr": null,
+      "category": "Group",
+      "definition": "The process of evaluating a group's total profitability in comparison to the profitability of accepting business from other channels",
+      "duettoRelation": "Duetto Group Displacement 2.0 is coming soon!"
+    },
+    {
+      "term": "Hotel Technology Next Generation",
+      "abbr": "HTNG",
+      "category": "Systems/Integrations",
+      "definition": "A global, non-profit trade association serving hotel companies and technology providers. It was founded in 2002 and is governed by a board of directors consisting of senior technology executives from hotel companies. Membership is open to companies and individuals involved with hospitality technology",
+      "duettoRelation": "The organization's stated objective is to promote interoperability of the many technology systems used in the hotel industry, such as property management systems, point-of-sale systems, telephone systems, building automation systems, guestroom entertainment systems such as video on demand, security and access control systems, and many others"
+    },
+    {
+      "term": "Length of Stay Tier",
+      "abbr": "LOS Tier",
+      "category": "Booking",
+      "definition": "Levels of reservations that have a defined length of stay",
+      "duettoRelation": "App sections: Yielding Overview, Reports: Market Segment, Production, Pace"
+    },
+    {
+      "term": "Lost Business",
+      "abbr": null,
+      "category": "Web Shopping",
+      "definition": "Refers to the potential demand in the market the hotel did not receive; consists of regrets and denials",
+      "duettoRelation": "Duetto measures lost business by placing a JavaScript tag on a hotel's direct booking engine and recording the number of visitors to the website and their reactions: whether they booked, received a rate and didn't book, or did not receive a rate. Although this is not fully representative of the total demand for the hotel and not all people who visit the website are serious shoppers, it can provide the hotel and idea of their potential demand. In the app, we can take into account the amount of serious shoppers to the website by weighting the number of regrets and denials we accept in the app. App sections: Home (Lost Business tab), Rate Information, Lost Business, Lost Business Detail"
+    },
+    {
+      "term": "Market Code",
+      "abbr": null,
+      "category": "Settings",
+      "definition": "Code that identifies a reservation as part of a particular market segment in the PMS",
+      "duettoRelation": "Duetto can segment on rate code or market code"
+    },
+    {
+      "term": "Max Length of Stay",
+      "abbr": "Max LOS",
+      "category": "Booking",
+      "definition": "A room inventory control function. Indicates that a reservation for arrival on a particular date may not extend past a certain number of days",
+      "duettoRelation": "A Restriction Duetto will support (coming in the fall)"
+    },
+    {
+      "term": "Mean Average Deviation",
+      "abbr": "MAD",
+      "category": "Forecast",
+      "definition": "When forecasting, measures the average error in terms of room nights",
+      "duettoRelation": "Unlike simple error, MAD takes the absolute value of the errors into account to get the real value of error since positive and negatives will not cancel each other out to show 0 error. Within the app, used to calculate forecasting errors. See Duetto Blog: http://www.duettoresearch.com/blog/get real-about-your-forecast-error/. App section: Forecasted Demand History Error Report"
+    },
+    {
+      "term": "Mean Average Percent Deviation",
+      "abbr": "MAPE",
+      "category": "Forecast",
+      "definition": "When forecasting, measures the average error in terms of room nights expressed as a percentage",
+      "duettoRelation": "Unlike simple error, MAPE takes the absolute value of the errors into account to get the real value of error since positive and negatives will not cancel each other out to show 0% error. Within the app, used to calculate forecasting errors. See Duetto Blog: http://www.duettoresearch.com/blog/get real-about-your-forecast-error/. App section: Forecasted Demand History Error Report"
+    },
+    {
+      "term": "Minimum Length of Stay",
+      "abbr": "Min LOS",
+      "category": "Booking",
+      "definition": "A room inventory control function. Indicates that a reservation for arrival on a particular date must be for a minimum number of nights (two or more)",
+      "duettoRelation": "A Restriction Duetto will support (coming in the fall)"
+    },
+    {
+      "term": "Net Rate",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "The sell rate with commission already taken out",
+      "duettoRelation": "Some OTAs require the net rate instead of the sell rate. Channel managers will manage the different types of rates/calculate the proper rates to send to each OTA"
+    },
+    {
+      "term": "No Show",
+      "abbr": null,
+      "category": "Booking",
+      "definition": "A person who makes a reservation and neither uses it nor cancels it",
+      "duettoRelation": null
+    },
+    {
+      "term": "On the Books",
+      "abbr": "OTB",
+      "category": "Booking",
+      "definition": "The number of reservations (excluding committed blocked rooms) -- DOES include rooms that have been reserved from the group block",
+      "duettoRelation": "Not to be confused with CMT"
+    },
+    {
+      "term": "Online Travel Agent",
+      "abbr": "OTA",
+      "category": "Segments",
+      "definition": "An online resource that allows consumers to research and book their own travel through the use of travel Web sites. Online Travel Agencies, travel intermediaries that allow consumers to research and book their own travel through the use of travel websites such as Expedia and Orbitz",
+      "duettoRelation": "Examples: Expedia, Orbitz. Although OTA's require rate parity, they are usually a separate yielding segment for the hotel so that the hotel can monitor the number of reservations coming into the hotel through that channel. Because OTAs sell at the same price but take a % commission for each booking, reservations through OTA's are less profitable than through the hotel's direct website"
+    },
+    {
+      "term": "Opaque",
+      "abbr": null,
+      "category": "Segments",
+      "definition": "Booking channel where the supplier (hotel) remains hidden until after the purchase is complete",
+      "duettoRelation": "Example: Hotwire.com. Opaque is usually a separate yielding segment for a hotel. Because the supplier isn't known until after the purchase, the site cannot be shopped by competing OTAs for rate parity thus allowing the hotel to produce greater discounts than on publically available sites"
+    },
+    {
+      "term": "Opera Simple Reservation Report",
+      "abbr": "OSR",
+      "category": "Systems/Integrations",
+      "definition": "A customizable reservations report in Opera PMS",
+      "duettoRelation": "Duetto uses this report to pull reservations from Opera PMS into the app when there is no direct connectivity through OXI. This report is customized for the exact fields Duetto needs and it scheduled to run and be sent into Duetto's import at a determined interval (usually once per hour)"
+    },
+    {
+      "term": "Overbooking",
+      "abbr": "OVB",
+      "category": "Booking",
+      "definition": "The practice of confirming reservations beyond capacity, either in expectation of cancellations or no-shows, or in error",
+      "duettoRelation": "App sections: Overbooking (needs a revamp in the app)"
+    },
+    {
+      "term": "OXI Interface",
+      "abbr": "OXI",
+      "category": "Systems/Integrations",
+      "definition": "What allows for the direct, real time connectivity between Duetto an Opera PMS",
+      "duettoRelation": "OXI has proven important in increasing the usage and effect of Duetto on a property. The interface refreshes blocks and reservations every 10 minutes. It also allows DORMS to push rates directly through Duetto into Opera (and other systems that are directly connected to Opera)"
+    },
+    {
+      "term": "Pace",
+      "abbr": null,
+      "category": "Booking",
+      "definition": "The rate at which reservations are made for a particular date; also called pickup",
+      "duettoRelation": "App sections: Home, Pricing Overview, Yielding Report, Pace, Daily Pace"
+    },
+    {
+      "term": "Permission Sets",
+      "abbr": null,
+      "category": "Settings",
+      "definition": "The degree of access assigned to each user within the app",
+      "duettoRelation": "Duetto can create and assign different access levels to different users. Access varies from Admin (ability to see all reports, make changes, and access settings) to read only (ability to see the app but make no changes). This is particularly important to cater to the different user levels in a hotel: asset manager, dorm, GM, sales, etc. App sections: Settings"
+    },
+    {
+      "term": "Pickup",
+      "abbr": "PU",
+      "category": "Booking",
+      "definition": "The speed at which rooms in a market segment are reserved (also called pace) within a certain time period (ie 1-day pickup is the number of rooms that are reserved within the past 1 day)",
+      "duettoRelation": "Duetto can be reconfigured at any time to show the pick-up or pace for a specific, configured time period. One benefit of Duetto and our ability to have real time data is our ability to show 0-day or same day pickup (how many reservations have been reserved today for a stay date). App Sections: Home page, Pricing Overview, Pace Report, Daily Pace Report"
+    },
+    {
+      "term": "Price Elasticity",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "A measure of responsiveness of the quantity of a raw good or service demanded to changes in its price. The more price elastic a good is the larger the change in demand due to a change in price",
+      "duettoRelation": "Duetto is working to create pricing experiments that will allow a DORM to test out the price elasticity of the market an better understand how far he/she can push rates"
+    },
+    {
+      "term": "Price Parity",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Setting all booking channels at the same price to ensure an even playing field of pricing or rates across all channels based purely on the price points",
+      "duettoRelation": null
+    },
+    {
+      "term": "Prior Year",
+      "abbr": null,
+      "category": "Booking",
+      "definition": "Finalized value of a metric from the previous year",
+      "duettoRelation": "This is a the finalized number not the number from the STLY (same time last year)"
+    },
+    {
+      "term": "Property Management System",
+      "abbr": "PMS",
+      "category": "Systems/Integrations",
+      "definition": "A comprehensive software application used to cover some basic objectives such as coordinating the operational functions of front office, sales and planning etc. Most common PMS systems include Opera, LMS, HMS",
+      "duettoRelation": "The source of truth for rates, reservations, and blocks are usually held in the property's PMS. Duetto requires at least a one way interface with the property's PMS in order for the property to be eligible to use the app"
+    },
+    {
+      "term": "Rate Code",
+      "abbr": null,
+      "category": "Settings",
+      "definition": "Code attached to each reservation that identifies a particular type of rate",
+      "duettoRelation": "Duetto can segment on rate code or market code"
+    },
+    {
+      "term": "Rate Parity",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Providing equal rates across multiple booking channels",
+      "duettoRelation": "Hotels must match their rates across OTAs, their direct booking channel, GDS, and other booking channels. OTAs will consider rate parity in their placement algorithms. Since each channel has varying costs of acquiring a reservation, rate parity leads to a difference in profit from different channels"
+    },
+    {
+      "term": "Rate Shopping Source",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "A company that provides a rate shopping service",
+      "duettoRelation": "Rate shops are usually paid by how many shops they do for a hotel. These shops can be from one or multiple sources (Brand.com, Expedia, Booking, etc). Duetto works with the following rate shopping companies: Travelclick, Revcaster"
+    },
+    {
+      "term": "Regrets",
+      "abbr": null,
+      "category": "Web Shopping",
+      "definition": "A hotel has been shopped on the hotel's direct booking engine and a rate was given, but a guest chooses not to accept the reservation",
+      "duettoRelation": "App sections: Home, Rate Information, Lost Business Report, Lost Business Detail Report"
+    },
+    {
+      "term": "Revenue per Available Room",
+      "abbr": "RevPAR",
+      "category": "Rate",
+      "definition": "Revenue per unit of inventory, calculated by dividing the daily revenue of a hotel by the total number of available rooms at that hotel, or by multiplying ADR by %Occupancy",
+      "duettoRelation": "Metric many hotels use to determine success, rather than using ADR alone because it adjusts for changes in occupancy that would affect the revenue outcome. App sections: Home, Reports"
+    },
+    {
+      "term": "Revenue Strategy",
+      "abbr": "RS",
+      "category": "RM",
+      "definition": "A comprehensive approach to profit optimization that: A) accounts for costs associated with customer acquisition and retention; B) leverages interdepartmental intelligence to facilitate a collaborative approach to revenue generation; and C) unlocks behavioral insights through new data sources and price elasticity testing",
+      "duettoRelation": "Duetto's approach: a more comprehensive approach to revenue management that encompasses not just pricing and demand optimization but also business intelligence as it relates to sales, marketing, distribution, and other functions across the hotel enterprise"
+    },
+    {
+      "term": "Room Type Differentials",
+      "abbr": "RTD",
+      "category": "Rate",
+      "definition": "Variance between the base room type and additional room types",
+      "duettoRelation": "Duetto allows DORMs to yield room type differentials via room type rules. App sections: Room Type Pricing Overview, Rules, Base Room Rates"
+    },
+    {
+      "term": "Same Time Last Year",
+      "abbr": "STLY",
+      "category": "Booking",
+      "definition": "The status of a certain metric at a particular point in time the previous year",
+      "duettoRelation": "DORMS will compare how they are currently doing for a day, month, or year to how they were doing at that same point the previous year. Example: How many reservations they have OTB for June 10 (10 days in the future) compared to how many reservations they had OTB for June 11 (same day of week) 10 days before the finalized date"
+    },
+    {
+      "term": "Sell Rate",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "The rate which the customer sees while shopping; This rate includes commission",
+      "duettoRelation": "Duetto pushes the sell rate before sales into the PMS"
+    },
+    {
+      "term": "Shopped Rate",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Sell rate shown on any particular channel",
+      "duettoRelation": "In Duetto, shopped rate refers to the rate taken from Expedia's API or imported from a rate shopping service such as travelclick or revcaster. The shopped rate is the sell rate after any sales available on any particular website. Due to rate parity, the sell rate on sites should represent the sell rate for the hotel on all sites. Some hotels will shop multiple sources (Brand.com, Expedia, Booking, etc) and want all rates displayed in the app to help ensure rate parity. App sections: Home, Pricing Overview, Yielding Report, Competitor Rate Report"
+    },
+    {
+      "term": "Shoulder Rate",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Rate offered to a group on shoulder dates when the group does not peak",
+      "duettoRelation": "Will be a part of Duetto's Group Displacement 2.0"
+    },
+    {
+      "term": "Smurf Business",
+      "abbr": "SMERF",
+      "category": "Segments",
+      "definition": "Hospitality acronym: Social, Military, Education, Religious, Fraternal (Sometimes includes an E for Ethnic)",
+      "duettoRelation": "Segmentation"
+    },
+    {
+      "term": "Source Code",
+      "abbr": null,
+      "category": "Settings",
+      "definition": "Code attached to each reservations that identifies the source of the booking",
+      "duettoRelation": null
+    },
+    {
+      "term": "STAR Report",
+      "abbr": "STAR",
+      "category": "Reports",
+      "definition": "Weekly or monthly report created by Smith Travel Research that a hotel can pay to receive as a service includes all key performance indicators (KPI's) for the property as well as the competitive set",
+      "duettoRelation": "Collected and downloaded into the application via excel spreadsheets, can be stored future reference. App section: Reports>Historical>Star"
+    },
+    {
+      "term": "Sub rate",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "Rate that is pulled out of a particular yielding segment and yielded separately",
+      "duettoRelation": "Allows a DORM to yield rates that would normally be a set percentage off another rate rather than merely opening/closing the rate. Example: AAA rate. App sections: Pricing Overview"
+    },
+    {
+      "term": "Tentative Group Block",
+      "abbr": "TGB",
+      "category": "Booking",
+      "definition": "Rooms held available for a group to reserve until a certain DBA who has not signed/fully committed",
+      "duettoRelation": "Duetto can only pull tentative blocks from inventory/yielding capacity when the hotel has OXI"
+    },
+    {
+      "term": "To be booked",
+      "abbr": "TBB",
+      "category": "Booking",
+      "definition": "Forecasted rooms that are expected to pick up but have not been booked yet",
+      "duettoRelation": "App sections: Rates Information, various Reports"
+    },
+    {
+      "term": "Transient Channels",
+      "abbr": null,
+      "category": "Segments",
+      "definition": "Non-group channels",
+      "duettoRelation": null
+    },
+    {
+      "term": "Unfenced Rate",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "A rate that has no requirements in order to make a reservation. A reservations department sales tool which provides a series of options to the guest. Guests are not forced to accept these restrictions but their rate is determined by which (if any) fences they accept",
+      "duettoRelation": "Vs. Fenced Rate"
+    },
+    {
+      "term": "Yield",
+      "abbr": "YM",
+      "category": "RM",
+      "definition": "The dynamic pricing, overbooking, and allocation of perishable assets to maximize revenue; Placing the right person in the right room at the right price",
+      "duettoRelation": "Duetto is used as an analytical tool to understand what and recommend the right price for the right room to maximize revenue"
+    },
+    {
+      "term": "Yielding Capacity",
+      "abbr": "YC",
+      "category": "Yielding",
+      "definition": "The number of rooms on which the hotel can yield rate",
+      "duettoRelation": "App sections: Home"
+    },
+    {
+      "term": "Revenue Management",
+      "abbr": "RM",
+      "category": "RM",
+      "definition": "The art and science of predicting real-time customer demand and optimizing the price and availability of products to match that demand",
+      "duettoRelation": null
+    },
+    {
+      "term": "Open Pricing",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "The ability to price all room types, channels and dates independently of each other to maximize revenue without having to close any off",
+      "duettoRelation": null
+    },
+    {
+      "term": "Dynamic Pricing",
+      "abbr": null,
+      "category": "Rate",
+      "definition": "The process of actively applying revenue management by selling the same products at different prices to different customers",
+      "duettoRelation": null
+    }
+  ],
+  "categories": [
+    "Rate",
+    "Booking",
+    "Settings",
+    "Systems/Integrations",
+    "Yielding",
+    "Forecast",
+    "Web Shopping",
+    "Duetto",
+    "Events",
+    "Group",
+    "Segments",
+    "Reports",
+    "RM"
+  ],
+  "searchHelper": "Search by term name, abbreviation, category, or include Duetto relation in search"
+}
