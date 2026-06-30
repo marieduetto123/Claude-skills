@@ -1,0 +1,165 @@
+{
+  "metrics": {
+    "revpar": {
+      "full": "RevPAR",
+      "abbr": "RevPAR",
+      "category": "primary",
+      "description": "Revenue Per Available Room",
+      "rules": "Always RevPAR — never abbreviated further",
+      "canonical": true,
+      "useAbbr": false
+    },
+    "adr": {
+      "full": "Average Daily Rate",
+      "abbr": "ADR",
+      "category": "primary",
+      "description": "Average revenue per room per night",
+      "useAbbr": {
+        "threshold": 120,
+        "note": "Use abbreviation in columns narrower than 120px"
+      },
+      "canonical": true
+    },
+    "occupancy": {
+      "full": "Occupancy",
+      "abbr": "Occ%",
+      "category": "primary",
+      "description": "Percentage of rooms sold",
+      "useAbbr": {
+        "threshold": 100,
+        "note": "Use abbreviation when width less than 100px"
+      },
+      "canonical": true
+    },
+    "avgLeadTime": {
+      "full": "Average Lead Time",
+      "abbr": "ALT",
+      "category": "primary",
+      "description": "Average days between booking and arrival",
+      "useAbbr": {
+        "spaceConstrained": true
+      },
+      "canonical": true
+    },
+    "pickup": {
+      "full": "Pickup",
+      "abbr": "PU",
+      "category": "primary",
+      "description": "Room bookings added since last check",
+      "useAbbr": {
+        "threshold": 100,
+        "note": "Use abbreviation in narrow columns (<100px)"
+      },
+      "canonical": true
+    },
+    "totalGuests": {
+      "full": "Total Guests",
+      "abbr": "PAX",
+      "category": "primary",
+      "description": "Total number of guests across all reservations",
+      "useAbbr": {
+        "threshold": 100,
+        "note": "Use abbreviation in narrow columns (<100px)"
+      },
+      "canonical": true
+    },
+    "availableRooms": {
+      "full": "Available Rooms",
+      "abbr": "AR",
+      "category": "primary",
+      "description": "Rooms available for sale",
+      "useAbbr": {
+        "threshold": 80,
+        "note": "Use abbreviation in columns narrower than 80px"
+      },
+      "canonical": true
+    },
+    "avgAdults": {
+      "full": "Average Adults",
+      "abbr": "AD",
+      "category": "primary",
+      "description": "Average number of adults per reservation",
+      "useAbbr": {
+        "spaceConstrained": true
+      },
+      "canonical": true
+    },
+    "avgChildren": {
+      "full": "Average Children",
+      "abbr": "CHD",
+      "category": "primary",
+      "description": "Average number of children per reservation",
+      "useAbbr": {
+        "spaceConstrained": true
+      },
+      "canonical": true
+    },
+    "los": {
+      "full": "Length of Stay",
+      "abbr": "LOS",
+      "category": "secondary",
+      "description": "Average number of nights per stay"
+    },
+    "goppar": {
+      "full": "Gross Operating Profit Per Available Room",
+      "abbr": "GOPPAR",
+      "category": "secondary",
+      "description": "Operating profit per available room"
+    },
+    "trevpar": {
+      "full": "Total Revenue Per Available Room",
+      "abbr": "TRevPAR",
+      "category": "secondary",
+      "description": "Includes ancillary revenue per available room"
+    },
+    "nrevpar": {
+      "full": "Net Revenue Per Available Room",
+      "abbr": "NRevPAR",
+      "category": "secondary",
+      "description": "Net revenue after commissions and costs"
+    },
+    "bar": {
+      "full": "Best Available Rate",
+      "abbr": "BAR",
+      "category": "secondary",
+      "description": "Lowest published rate"
+    },
+    "bookingWindow": {
+      "full": "Booking Window",
+      "abbr": "BW",
+      "category": "secondary",
+      "description": "Days between booking and check-in"
+    },
+    "forecast": {
+      "full": "Forecast",
+      "abbr": "Fcst",
+      "category": "secondary",
+      "description": "Projected occupancy or revenue"
+    }
+  },
+  "rules": {
+    "revparRule": "RevPAR is always 'RevPAR' — never abbreviated further, never written as RevPar, Revpar, or REVPAR",
+    "defaultBehavior": "Use full term by default; fall back to abbreviation only in space-constrained contexts",
+    "spaceConstrainedContexts": [
+      "AG Grid columns with width < threshold",
+      "Compact UI cells or labels",
+      "Narrow column headers",
+      "Mobile/responsive layouts"
+    ],
+    "alwaysFullTerm": [
+      "Tooltip text",
+      "Modal labels",
+      "Form field labels",
+      "Sidebar labels",
+      "Documentation and comments",
+      "Help text"
+    ]
+  },
+  "helpers": {
+    "getLabel": "function(metric, isCompact) { return isCompact && metric.abbr ? metric.abbr : metric.full; }",
+    "example": {
+      "usage": "getLabel(metrics.adr, false) → 'Average Daily Rate'",
+      "compact": "getLabel(metrics.adr, true) → 'ADR'"
+    }
+  }
+}
